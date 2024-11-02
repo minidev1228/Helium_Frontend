@@ -39,7 +39,7 @@
   }
 
   
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 642px) {
   .lading-page{
     background-image: url("./assets/mobile-back.png");
     width: 100%;

@@ -58,7 +58,7 @@ const LandingPage = () =>{
                     MEET THE TEAM
                     </p>
                     <div className="w-full overflow-x-auto sm:flex sm:justify-center">
-                        <div className="block" style={{width:"1200px"}}>
+                        <div className="flex justify-center items-center" style={{width:"1400px"}}>
                             <MemberCard title={"Founder and Creative Director"} img={man4Img} name={"Emma Larsen"} content={"With 10 years of experience in game development, Emma has created captivating worlds and worked with top studios and renowned franchises."} />
                             <MemberCard title={"Technical Director"} img={man2Img} name={"Mark Daly"} content={"A blockchain and Web3 technology expert, Mark is responsible for the technical implementation and security of the platform."} />
                             <MemberCard title={"Head of Economy and Monetization"} img={man3Img} name={"Anna Carr"} content={"A specialist in game economies with experience in well-known P2E projects, Anna designs a balanced and engaging in-game economy."} />
