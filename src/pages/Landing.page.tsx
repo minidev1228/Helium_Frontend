@@ -4,10 +4,14 @@ import Layout from "../Layouts/index"
 import YellowButton from "../components/YellowButton"
 import Frame from "../components/Frame"
 import PhaseCard from "../components/PhaseCard"
+import MemberCard from "../components/MemberCard"
 
 import logoImg from "../assets/logo.png"
 import bottomArrowImg from "../assets/bottom_arrow.png"
 import man1Img from "../assets/baba-disappear.gif.png"
+import man3Img from "../assets/character-stand-2.gif.png"
+import man2Img from "../assets/archer-stand.gif.png"
+import man4Img from "../assets/archie-shoot.gif.png"
 import frame1Img from "../assets/frames/frame1.png"
 import frame2Img from "../assets/frames/frame2.png"
 import frame3Img from "../assets/frames/frame3.png"
@@ -50,10 +54,18 @@ const LandingPage = () =>{
                     <PhaseCard style={3} title={"Phase 3"} items={["Raffles", "Guild Wars", "Challenges", "Events"]} />
                     <PhaseCard style={3} title={"Phase 4"} items={["DAO Launch", "Partnerships and collaborations", "New characters"]} />
                 </div>
-                <div className="bg-main pt-20 flex items-center text-white flex-col pb-36">
-                    <p className="mt-5 text-center">
+                <div className="bg-main w-full pt-20 flex items-center justify-center text-white flex-col pb-36">
+                    <p className="mt-5 text-center mb-14">
                     MEET THE TEAM
                     </p>
+                    <div class="w-full overflow-x-auto sm:flex sm:justify-center">
+                        <div className="block" style={{width:"1200px"}}>
+                            <MemberCard title={"Founder and Creative Director"} img={man4Img} name={"Emma Larsen"} content={"With 10 years of experience in game development, Emma has created captivating worlds and worked with top studios and renowned franchises."} />
+                            <MemberCard title={"Technical Director"} img={man2Img} name={"Mark Daly"} content={"A blockchain and Web3 technology expert, Mark is responsible for the technical implementation and security of the platform."} />
+                            <MemberCard title={"Head of Economy and Monetization"} img={man3Img} name={"Anna Carr"} content={"A specialist in game economies with experience in well-known P2E projects, Anna designs a balanced and engaging in-game economy."} />
+                            <MemberCard title={"Head of Marketing and Community"} img={man1Img} name={"Sam Kim"} content={"A master of promotion strategies and community building, Sam has helped grow some of the largest blockchain projects."} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </Layout>
