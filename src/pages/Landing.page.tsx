@@ -3,6 +3,7 @@ import react from "react"
 import Layout from "../Layouts/index"
 import YellowButton from "../components/YellowButton"
 import Frame from "../components/Frame"
+import PhaseCard from "../components/PhaseCard"
 
 import logoImg from "../assets/logo.png"
 import bottomArrowImg from "../assets/bottom_arrow.png"
@@ -28,7 +29,7 @@ const LandingPage = () =>{
                     </div>
                 </div>
                 <div className="bg-main pt-5 flex items-center text-white flex-col sm:pt-5">
-                <button className="sm:hidden"><img src={bottomArrowImg} className="size-4 mb-20" alt="" /></button>
+                    <button className="sm:hidden"><img src={bottomArrowImg} className="size-4 mb-20" alt="" /></button>
                     <img src={man1Img} className="size-20" alt="" />
                     <p className="mt-5 text-center">
                     Experience a unique gaming experience with Helium
@@ -38,6 +39,21 @@ const LandingPage = () =>{
                     <Frame title={"Avatars and abilities"} content={"Upgrade your character, improve skills and create unique combinations to become stronger in battles with other"} img={frame3Img} dir={true} />
                     <Frame title={"NFT items and unique artifacts"} content={"All in-game items can be your unique assets. Collect, upgrade and trade NFT artifacts on the open market."} img={frame4Img} dir={false} />
                     <Frame title={"Ever-Changing Gameplay"} content={"Enjoy ever-changing levels as you immerse yourself in this epic dungeon-crawler.Experience a vast collection of Heroes, Spells, Monsters and Game Mechanics!"} img={frame5Img} dir={true} />
+                </div>
+                <div className="bg-main pt-20 flex items-center text-white flex-col pb-5">
+                    <img src={man1Img} className="size-20" alt="" />
+                    <p className="mt-5 text-center">
+                    ROADMAP
+                    </p>
+                    <PhaseCard style={1} title={"Phase 1"} items={["Game Development", "Release of Closed Alpha Testing", "Secure Launch Pad"]} />
+                    <PhaseCard style={2} title={"Phase 2"} items={["WL & Public Mint", "Secondary Market Listing", "Game launch"]} />
+                    <PhaseCard style={3} title={"Phase 3"} items={["Raffles", "Guild Wars", "Challenges", "Events"]} />
+                    <PhaseCard style={3} title={"Phase 4"} items={["DAO Launch", "Partnerships and collaborations", "New characters"]} />
+                </div>
+                <div className="bg-main pt-20 flex items-center text-white flex-col pb-36">
+                    <p className="mt-5 text-center">
+                    MEET THE TEAM
+                    </p>
                 </div>
             </div>
         </Layout>

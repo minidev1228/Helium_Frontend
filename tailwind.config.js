@@ -11,7 +11,8 @@ export default {
       'white' : "#ffffff",
       'black' : "black",
       'main' : '#010f20',
-      'side' : "#02203e"
+      'side' : "#02203e",
+      'orange' : "#d5aa71"
     }
   },
   plugins: [],
