@@ -8,7 +8,7 @@ import menuImg from "../assets/menu.png"
 
 import YellowButton from '../components/YellowButton'
 
-const Header = () =>{
+const Header = ({showMenu}) =>{
     return (
         <div className="w-full h-16 fixed top-0 flex items-center justify-center z-10">
             <div className="w-11/12 sm:w-8/12 h-full flex items-center text-white">
@@ -30,7 +30,7 @@ const Header = () =>{
                     <YellowButton content={"Download"} />
                     </div>
                 </div>
-                <button className="sm:hidden">
+                <button className="sm:hidden" onClick={showMenu}>
                     <img src={menuImg} className="size-5" alt="" />
                 </button>
             </div>

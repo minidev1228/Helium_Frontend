@@ -10,7 +10,8 @@ export default {
       'yellow':'#fcda3f' ,
       'white' : "#ffffff",
       'black' : "black",
-      'main' : '#010f20'
+      'main' : '#010f20',
+      'side' : "#02203e"
     }
   },
   plugins: [],
