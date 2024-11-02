@@ -1,11 +1,18 @@
 import react from "react"
 
+import logoImg from "../assets/logo.png"
+import noteImg from "../assets/1.png"
+import xImg from "../assets/Vector.png"
+import discordImg from "../assets/discord.png"
+
+import YellowButton from '../components/YellowButton'
+
 const Header = () =>{
     return (
         <div className="w-full h-16 fixed top-0 flex items-center justify-center">
             <div className="w-8/12 h-full flex items-center text-white">
                 <div className=" flex flex-row items-center">
-                    <img className=" mr-3 size-8" src="../assets/logo.png" alt="" />
+                    <img className=" mr-3 size-8" src={logoImg} alt="" />
                     <h3 className=" font-serif">HELIUM</h3>
                 </div>
                 <div className="flex-grow flex justify-center">
@@ -14,8 +21,11 @@ const Header = () =>{
                     <a className=" mr-4 ml-4" href="">Roadmap</a>
                     <a className=" mr-4 ml-4" href="">Team</a>
                 </div>
-                <div>
-                    <button><img src="../assets/1.png" alt="" /></button>
+                <div className=" h-full flex items-center">
+                    <button className=" mr-2 ml-2"><img src={noteImg} className="size-5" alt="" /></button>
+                    <button className=" mr-2 ml-2"><img src={xImg} className="size-5" alt="" /></button>
+                    <button className=" mr-5 ml-2"><img src={discordImg} className="size-5" alt="" /></button>
+                    <YellowButton content={"Download"} />
                 </div>
             </div>
         </div>
