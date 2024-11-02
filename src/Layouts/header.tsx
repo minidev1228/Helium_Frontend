@@ -11,9 +11,8 @@ const Header = () =>{
     return (
         <div className="w-full h-16 fixed top-0 flex items-center justify-center">
             <div className="w-8/12 h-full flex items-center text-white">
-                <div className=" flex flex-row items-center">
-                    <img className=" mr-3 size-8" src={logoImg} alt="" />
-                    <h3 className=" font-serif">HELIUM</h3>
+                <div className=" flex flex-row items-center h-full">
+                    <img className=" mr-3 h-1/2" src={logoImg} alt="" />
                 </div>
                 <div className="flex-grow flex justify-center">
                     <a className=" mr-4 ml-4" href="">Home</a>
