@@ -1,4 +1,3 @@
-import react from "react"
 
 import logoImg from "../assets/logo.png"
 import noteImg from "../assets/1.png"
@@ -8,7 +7,12 @@ import menuImg from "../assets/menu.png"
 
 import YellowButton from '../components/YellowButton'
 
-const Header = ({showMenu}) =>{
+type Props = {
+    showMenu: () => void;
+};
+
+
+const Header: React.FC<Props> = ({showMenu}) =>{
     return (
         <div className="w-full h-16 fixed top-0 flex items-center justify-center z-10">
             <div className="w-11/12 sm:w-8/12 h-full flex items-center text-white">

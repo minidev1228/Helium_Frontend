@@ -1,6 +1,13 @@
 import React from "react"
 
-const MemberCard = ({title, img, name, content}) =>{
+type Props = {
+    title: string;
+    content: string;
+    img: string;
+    name: String;
+};
+
+const MemberCard: React.FC<Props> = ({title, img, name, content}) =>{
     return (
         <div className="bg-yellow h-80 flex flex-col items-center float-right rounded-lg text-black pt-5 p-5 mr-10" style={{width:"250px"}}>
             <p className="mb-5 text-center text-xs">{title}</p>

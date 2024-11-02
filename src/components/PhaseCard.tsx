@@ -1,4 +1,3 @@
-import react from "react"
 
 import "./styles.css"
 
@@ -23,13 +22,20 @@ const Order3 = () =>{
     )
 }
 
-const PhaseCard = ({title, items, style}) =>{
+type Props = {
+    title: string;
+    style: number;
+    items: string[];
+};
+
+
+const PhaseCard: React.FC<Props> = ({title, items, style}) =>{
     return (
         <div className="phase-card">
             <h1 className="mr-5 text-2xl text-black">{title}</h1>
             <div className="flex sm:flex-col sm:items-start sm:justify-center flex-wrap w-10/12 sm:w-auto">
                 {
-                    items.map(item=>{
+                    items.map((item: string)=>{
                         return(
                             <div className="mt-3 flex flex-row justify-center items-center mr-2">
                                 {

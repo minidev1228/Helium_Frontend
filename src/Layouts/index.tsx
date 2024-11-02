@@ -1,4 +1,4 @@
-import react, { useState } from "react"
+import { useState, ReactNode } from "react"
 
 import Header from "./header"
 import Footer from "./footer"
@@ -9,7 +9,11 @@ import discordImg from "../assets/discord.png"
 import noteImg from "../assets/1.png"
 import xImg from "../assets/Vector.png"
 
-const Layout = ({children}) =>{
+type Props = {
+    children: ReactNode;
+};
+
+const Layout: React.FC<Props> = ({children}) =>{
 
     const [isMenuShown, setIsMenuShown] = useState(false);
     

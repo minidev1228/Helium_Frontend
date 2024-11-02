@@ -1,4 +1,3 @@
-import react from "react"
 
 import noteImg from "../assets/y-m.png";
 import xImg from "../assets/y-x.png";

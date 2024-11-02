@@ -1,4 +1,3 @@
-import react from "react"
 
 import Layout from "../Layouts/index"
 import YellowButton from "../components/YellowButton"
@@ -58,7 +57,7 @@ const LandingPage = () =>{
                     <p className="mt-5 text-center mb-14">
                     MEET THE TEAM
                     </p>
-                    <div class="w-full overflow-x-auto sm:flex sm:justify-center">
+                    <div className="w-full overflow-x-auto sm:flex sm:justify-center">
                         <div className="block" style={{width:"1200px"}}>
                             <MemberCard title={"Founder and Creative Director"} img={man4Img} name={"Emma Larsen"} content={"With 10 years of experience in game development, Emma has created captivating worlds and worked with top studios and renowned franchises."} />
                             <MemberCard title={"Technical Director"} img={man2Img} name={"Mark Daly"} content={"A blockchain and Web3 technology expert, Mark is responsible for the technical implementation and security of the platform."} />

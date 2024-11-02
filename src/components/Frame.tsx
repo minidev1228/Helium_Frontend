@@ -1,8 +1,17 @@
-import react from "react"
+
+import React from "react";
 
 import "./styles.css"
 
-const Frame = ({title, content, img, dir}) =>{
+type Props = {
+  title: string;
+  content: string;
+  img: string;
+  dir: boolean;
+};
+
+
+const Frame: React.FC<Props> = ({title, content, img, dir})=>{
     return (
         <div className={dir?"frame flex-col sm:flex-row ":"frame flex-col sm:flex-row-reverse"}>
             <img src={img} className="ml-5 mr-5 w-52" alt="" />
