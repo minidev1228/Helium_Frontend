@@ -1,4 +1,5 @@
 import { useState, ReactNode } from "react"
+import { useNavigate } from "react-router-dom";
 
 import Header from "./header"
 import Footer from "./footer"
@@ -14,6 +15,7 @@ type Props = {
 };
 
 const Layout: React.FC<Props> = ({children}) =>{
+    const navigate = useNavigate();
 
     const [isMenuShown, setIsMenuShown] = useState(false);
     
@@ -23,6 +25,10 @@ const Layout: React.FC<Props> = ({children}) =>{
 
     const showMenu = () =>{
         setIsMenuShown(true);
+    }
+
+    const goToDownLoadPage = () =>{
+        navigate("/download");
     }
 
     return(
@@ -40,7 +46,7 @@ const Layout: React.FC<Props> = ({children}) =>{
                         <button className="mt-10 flex items-center"><img src={discordImg} className="size-5 mr-3" alt="" /><p>Discord</p></button>
                     </div>
                     <div className="w-10/12 mt-12 h-16">
-                    <YellowButton content={"Download"} onClickHandler={()=>{}}/>
+                    <YellowButton content={"Download"} onClickHandler={goToDownLoadPage}/>
                     </div>
                 </div> : ""
             }
