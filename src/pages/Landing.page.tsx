@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 
 import Layout from "../Layouts/index"
 import YellowButton from "../components/YellowButton"
@@ -18,6 +19,8 @@ import frame4Img from "../assets/frames/frame4.png"
 import frame5Img from "../assets/frames/frame5.png"
 
 const LandingPage = () =>{
+    const navigate = useNavigate();
+
     return (
         <Layout>
             <div className=" w-full">
@@ -27,7 +30,7 @@ const LandingPage = () =>{
                         <p className="  text-center">Battle mythical creatures, find magical artifacts, and pump up your heroes' skills while earning in the in-game Play-to-Earn economy.</p>
                         <button className="hidden sm:block"><img src={bottomArrowImg} className="size-4 mt-3 mb-5" alt="" /></button>
                         <div className="w-11/12 h-16 mt-20 mb-5 sm:hidden">
-                        <YellowButton content={"Download"} />
+                        <YellowButton content={"Download"} onClick={()=>{navigate("/download")}}/>
                         </div>
                     </div>
                 </div>

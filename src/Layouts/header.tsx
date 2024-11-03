@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 
 import logoImg from "../assets/logo.png"
 import noteImg from "../assets/1.png"
@@ -13,6 +14,8 @@ type Props = {
 
 
 const Header: React.FC<Props> = ({showMenu}) =>{
+    const navigate = useNavigate();
+
     return (
         <div className="w-full h-16 fixed top-0 flex items-center justify-center z-10">
             <div className="w-11/12 sm:11/12 md:w-11/12 lg:8/12 h-full flex items-center text-white">
@@ -31,7 +34,7 @@ const Header: React.FC<Props> = ({showMenu}) =>{
                     <button className=" mr-2 ml-2"><img src={xImg} className="size-5" alt="" /></button>
                     <button className=" mr-5 ml-2"><img src={discordImg} className="size-5" alt="" /></button>
                     <div className="h-9">
-                    <YellowButton content={"Download"} />
+                    <YellowButton content={"Download"} onClick={()=>{navigate("/download")}}/>
                     </div>
                 </div>
                 <button className="md:hidden" onClick={showMenu}>
