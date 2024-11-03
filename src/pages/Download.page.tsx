@@ -14,7 +14,7 @@ import post4Img from "../assets/post4.png"
 const DownloadPage = () =>{
     return (
         <Layout>
-            <div className=" w-full bg-main flex flex-col items-center pt-24">
+            <div className=" w-full bg-main flex flex-col items-center pt-24" style={{minHeight:"calc(100vh - 64px)"}}>
                 <h1 className=" text-white mb-10">DOWNLAOD GAME</h1>
                 <div className="w-full flex items-center flex-col">
                     <div className="flex flex-col w-full sm:w-auto sm:flex-row items-center">
