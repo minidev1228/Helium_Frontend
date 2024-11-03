@@ -20,11 +20,15 @@ const Header: React.FC<Props> = ({showMenu}) =>{
         navigate("/download");
     }
 
+    const goToHome = () =>{
+        navigate("/");
+    }
+
     return (
         <div className="w-full h-16 fixed top-0 flex items-center justify-center z-10">
             <div className="w-11/12 sm:11/12 md:w-11/12 lg:8/12 h-full flex items-center text-white">
                 <div className=" flex flex-row items-center h-full">
-                    <img className=" mr-3 h-1/2" src={logoImg} alt="" />
+                    <img className=" mr-3 h-1/2" src={logoImg} alt="" onClick={()=>{goToHome()}} />
                 </div>
                 <div className="flex-grow md:hidden"></div>
                 <div className="flex-grow justify-center hidden md:flex">
