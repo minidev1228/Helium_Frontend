@@ -40,7 +40,7 @@ const Layout: React.FC<Props> = ({children}) =>{
                         <button className="mt-10 flex items-center"><img src={discordImg} className="size-5 mr-3" alt="" /><p>Discord</p></button>
                     </div>
                     <div className="w-10/12 mt-12 h-16">
-                    <YellowButton content={"Download"} />
+                    <YellowButton content={"Download"} onClickHandler={()=>{}}/>
                     </div>
                 </div> : ""
             }
