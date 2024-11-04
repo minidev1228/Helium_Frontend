@@ -28,7 +28,7 @@ const LandingPage = () =>{
     return (
         <Layout>
             <div className=" w-full">
-                <div className="lading-page  relative flex justify-center items-center">
+                <div className="lading-page  relative flex justify-center items-center" id="home">
                     <img src={logoImg} className="h-20" alt="" />
                         <div className="absolute bottom-0 text-white flex justify-center items-center w-full h-50 flex-col pr-5 pl-5">
                         <p className="  text-center">Battle mythical creatures, find magical artifacts, and pump up your heroes' skills while earning in the in-game Play-to-Earn economy.</p>
@@ -38,7 +38,7 @@ const LandingPage = () =>{
                         </div>
                     </div>
                 </div>
-                <div className="bg-main pt-5 flex items-center text-white flex-col sm:pt-5">
+                <div className="bg-main pt-5 flex items-center text-white flex-col sm:pt-5" id="feature">
                     <button className="sm:hidden"><img src={bottomArrowImg} className="size-4 mb-20" alt="" /></button>
                     <img src={man1Img} className="size-20" alt="" />
                     <p className="mt-5 text-center">
@@ -50,7 +50,7 @@ const LandingPage = () =>{
                     <Frame title={"NFT items and unique artifacts"} content={"All in-game items can be your unique assets. Collect, upgrade and trade NFT artifacts on the open market."} img={frame4Img} dir={false} />
                     <Frame title={"Ever-Changing Gameplay"} content={"Enjoy ever-changing levels as you immerse yourself in this epic dungeon-crawler.Experience a vast collection of Heroes, Spells, Monsters and Game Mechanics!"} img={frame5Img} dir={true} />
                 </div>
-                <div className="bg-main pt-20 flex items-center text-white flex-col pb-5">
+                <div className="bg-main pt-20 flex items-center text-white flex-col pb-5" id="roadmap">
                     <img src={man1Img} className="size-20" alt="" />
                     <p className="mt-5 text-center">
                     ROADMAP
@@ -60,7 +60,7 @@ const LandingPage = () =>{
                     <PhaseCard style={3} title={"Phase 3"} items={["Raffles", "Guild Wars", "Challenges", "Events"]} />
                     <PhaseCard style={3} title={"Phase 4"} items={["DAO Launch", "Partnerships and collaborations", "New characters"]} />
                 </div>
-                <div className="bg-main w-full pt-20 flex items-center justify-center text-white flex-col pb-36">
+                <div className="bg-main w-full pt-20 flex items-center justify-center text-white flex-col pb-36" id="team">
                     <p className="mt-5 text-center mb-14">
                     MEET THE TEAM
                     </p>

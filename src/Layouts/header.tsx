@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import logoImg from "../assets/logo.png"
 import noteImg from "../assets/1.png"
@@ -32,10 +33,14 @@ const Header: React.FC<Props> = ({showMenu}) =>{
                 </div>
                 <div className="flex-grow md:hidden"></div>
                 <div className="flex-grow justify-center hidden md:flex">
-                    <a className=" mr-4 ml-4" href="">Home</a>
+                    {/* <a className=" mr-4 ml-4" href="">Home</a>
                     <a className=" mr-4 ml-4" href="">Features</a>
                     <a className=" mr-4 ml-4" href="">Roadmap</a>
-                    <a className=" mr-4 ml-4" href="">Team</a>
+                    <a className=" mr-4 ml-4" href="">Team</a> */}
+                    <Link className=" mr-4 ml-4 cursor-pointer" to="home" spy={true} smooth={true} duration={500}>Home</Link>
+                    <Link className=" mr-4 ml-4 cursor-pointer" to="feature" spy={true} smooth={true} duration={500}>Features</Link>
+                    <Link className=" mr-4 ml-4 cursor-pointer" to="roadmap" spy={true} smooth={true} duration={500}>Roadmap</Link>
+                    <Link className=" mr-4 ml-4 cursor-pointer" to="team" spy={true} smooth={true} duration={500}>Team</Link>
                 </div>
                 <div className=" h-full hidden items-center md:flex">
                     <button className=" mr-2 ml-2"><img src={noteImg} className="size-5" alt="" /></button>
