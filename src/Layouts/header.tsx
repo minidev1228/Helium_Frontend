@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+import {useEffect} from 'react'
+import { useNavigate, useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
 
 import logoImg from "../assets/logo.png"
@@ -16,14 +17,33 @@ type Props = {
 
 const Header: React.FC<Props> = ({showMenu}) =>{
     const navigate = useNavigate();
+    const location = useLocation();
 
     const goToDownLoadPage = () =>{
         navigate("/download");
     }
 
+    const downToElement = (ele) =>{
+        if(location.pathname === "/") return;
+        sessionStorage.setItem("element", ele);
+        navigate("/");
+    }
+
     const goToHome = () =>{
         navigate("/");
     }
+
+    useEffect(()=>{
+        if(location.pathname !== "/") return;
+        // setTimeout(() => {
+            let element = sessionStorage.getItem("element");
+            if(element === "" || element === undefined || element === null) return;
+            document.querySelector(`#${element}`, 500).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+            sessionStorage.setItem("element", "");
+        // }, 1000);
+    }, [])
 
     return (
         <div className="w-full h-16 fixed top-0 flex items-center justify-center z-10">
@@ -37,10 +57,10 @@ const Header: React.FC<Props> = ({showMenu}) =>{
                     <a className=" mr-4 ml-4" href="">Features</a>
                     <a className=" mr-4 ml-4" href="">Roadmap</a>
                     <a className=" mr-4 ml-4" href="">Team</a> */}
-                    <Link className=" mr-4 ml-4 cursor-pointer" to="home" spy={true} smooth={true} duration={500}>Home</Link>
-                    <Link className=" mr-4 ml-4 cursor-pointer" to="feature" spy={true} smooth={true} duration={500}>Features</Link>
-                    <Link className=" mr-4 ml-4 cursor-pointer" to="roadmap" spy={true} smooth={true} duration={500}>Roadmap</Link>
-                    <Link className=" mr-4 ml-4 cursor-pointer" to="team" spy={true} smooth={true} duration={500}>Team</Link>
+                    <Link className=" mr-4 ml-4 cursor-pointer" to="home" onClick={()=>{downToElement("home")}} spy={true} smooth={true} duration={500}>Home</Link>
+                    <Link className=" mr-4 ml-4 cursor-pointer" to="feature" onClick={()=>{downToElement("feature")}} spy={true} smooth={true} duration={500}>Features</Link>
+                    <Link className=" mr-4 ml-4 cursor-pointer" to="roadmap" onClick={()=>{downToElement("roadmap")}} spy={true} smooth={true} duration={500}>Roadmap</Link>
+                    <Link className=" mr-4 ml-4 cursor-pointer" to="team" onClick={()=>{downToElement("team")}} spy={true} smooth={true} duration={500}>Team</Link>
                 </div>
                 <div className=" h-full hidden items-center md:flex">
                     <button className=" mr-2 ml-2"><img src={noteImg} className="size-5" alt="" /></button>
