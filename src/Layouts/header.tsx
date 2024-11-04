@@ -23,7 +23,7 @@ const Header: React.FC<Props> = ({showMenu}) =>{
         navigate("/download");
     }
 
-    const downToElement = (ele) =>{
+    const downToElement = (ele:string) =>{
         if(location.pathname === "/") return;
         sessionStorage.setItem("element", ele);
         navigate("/");
@@ -37,8 +37,8 @@ const Header: React.FC<Props> = ({showMenu}) =>{
         if(location.pathname !== "/") return;
         // setTimeout(() => {
             let element = sessionStorage.getItem("element");
-            if(element === "" || element === undefined || element === null) return;
-            document.querySelector(`#${element}`, 500).scrollIntoView({ 
+            if(element === "" || element === undefined || element === null || element==='null') return;
+            document.querySelector(`#${element}`)?.scrollIntoView({ 
                 behavior: 'smooth' 
             });
             sessionStorage.setItem("element", "");
