@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 import logoImg from "../assets/logo.png"
 import noteImg from "../assets/1.png"
