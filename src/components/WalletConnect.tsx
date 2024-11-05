@@ -9,8 +9,8 @@ const USDC_ABI = [
 
 const WalletConnect: React.FC = () => {
   const [account, setAccount] = useState<string | null>(null);
-  const [ethBalance, setEthBalance] = useState<string>('123');
-  const [usdcBalance, setUsdcBalance] = useState<string>('123');
+  const [ethBalance, setEthBalance] = useState<string>('0');
+  const [usdcBalance, setUsdcBalance] = useState<string>('0');
 
   const connectWallet = async () => {
     if (window.ethereum) {
@@ -38,10 +38,17 @@ const WalletConnect: React.FC = () => {
       const balance = await provider.getBalance(walletAddress);
       setEthBalance(ethers.utils.formatEther(balance)); // Convert balance to standard units
 
+      if (!ethers.utils.isAddress(walletAddress)) {
+        throw new Error(`Invalid Ethereum address: ${walletAddress}`);
+      }
       // Get USDC balance
       const usdcContract = new ethers.Contract(USDC_CONTRACT_ADDRESS, USDC_ABI, provider);
       const usdcBal = await usdcContract.balanceOf(walletAddress);
       setUsdcBalance(ethers.utils.formatUnits(usdcBal, 6)); // USDC has 6 decimals
+	  // Get USDC balance
+      // const usdcContract = new ethers.Contract(USDC_CONTRACT_ADDRESS, USDC_ABI, provider);
+      // const usdcBal = await usdcContract.balanceOf(walletAddress);
+      // setUsdcBalance(ethers.utils.formatUnits(usdcBal, 6)); // USDC has 6 decimals
     } catch (error) {
       console.error("Error fetching balances:", error);
     }
