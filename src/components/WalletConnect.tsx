@@ -43,12 +43,9 @@ const WalletConnect: React.FC = () => {
       }
       // Get USDC balance
       const usdcContract = new ethers.Contract(USDC_CONTRACT_ADDRESS, USDC_ABI, provider);
+      // console.log("My wallet address : ", walletAddress);
       const usdcBal = await usdcContract.balanceOf(walletAddress);
       setUsdcBalance(ethers.utils.formatUnits(usdcBal, 6)); // USDC has 6 decimals
-	  // Get USDC balance
-      // const usdcContract = new ethers.Contract(USDC_CONTRACT_ADDRESS, USDC_ABI, provider);
-      // const usdcBal = await usdcContract.balanceOf(walletAddress);
-      // setUsdcBalance(ethers.utils.formatUnits(usdcBal, 6)); // USDC has 6 decimals
     } catch (error) {
       console.error("Error fetching balances:", error);
     }
