@@ -1,7 +1,7 @@
 
 import Layout from "../Layouts/index"
 import YellowIconButton from "../components/YellowIconButton"
-import WalletConnect from "../components/WalletConnect"
+// import WalletConnect from "../components/WalletConnect"
 
 import windowImg from "../assets/window.png"
 import macosImg from "../assets/macos.png"
@@ -16,9 +16,9 @@ const DownloadPage = () =>{
     return (
         <Layout>
             <div className=" w-full bg-main flex flex-col items-center pt-24" style={{minHeight:"calc(100vh - 64px)"}}>
-                <WalletConnect />
-                <br />
-                <br />
+                {/* <WalletConnect /> */}
+                {/* <br /> */}
+                {/* <br /> */}
                 <h1 className=" text-white mb-10">DOWNLAOD GAME</h1>
                 <div className="w-full flex items-center flex-col">
                     <div className="flex flex-col w-full sm:w-auto sm:flex-row items-center">
